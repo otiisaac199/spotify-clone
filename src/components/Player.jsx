@@ -38,19 +38,22 @@ const Player = () => {
             src={assets.prev_icon}
             alt=""
           />
+          {playStatus ? (
+            <img
+              onClick={pause}
+              className="w-4 cursor-pointer"
+              src={assets.pause_icon}
+              alt=""
+            />
+          ) : (
+            <img
+              onClick={play}
+              className="w-4 cursor-pointer"
+              src={assets.play_icon}
+              alt=""
+            />
+          )}
 
-          <img
-            onClick={play}
-            className="w-4 cursor-pointer"
-            src={assets.play_icon}
-            alt=""
-          />
-          <img
-            onClick={pause}
-            className="w-4 cursor-pointer"
-            src={assets.pause_icon}
-            alt=""
-          />
           <img
             onClick={next}
             className="w-4 cursor-pointer"
